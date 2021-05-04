@@ -4,11 +4,15 @@
   "description": "A talkative little dog",
   "main": "dist/terrier.js",
   "scripts": {
+
     "test": "echo \"Error: no test specified\" && exit 1",
+
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+
     "build": "tsc",
     "build:watch": "tsc --watch"
+
   },
   "repository": {
     "type": "git",

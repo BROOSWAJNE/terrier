@@ -91,6 +91,7 @@ export function createLogger({
 			warn: createMethodForLevel(LoggerLevel.Warn),
 			info: createMethodForLevel(LoggerLevel.Info),
 			debug: createMethodForLevel(LoggerLevel.Debug),
+
 			child: (...ctx: string[]) => createChild(...context, ...ctx),
 		});
 	})( );
