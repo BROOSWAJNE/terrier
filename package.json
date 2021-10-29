@@ -2,7 +2,9 @@
   "name": "@brooswajne/terrier",
   "version": "0.0.1",
   "description": "A talkative little dog",
-  "main": "dist/terrier.js",
+  "main": "./dist/terrier.js",
+  "exports": "./dist/terrier.js",
+  "type": "module",
   "scripts": {
 
     "test": "echo \"Error: no test specified\" && exit 1",
