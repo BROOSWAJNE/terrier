@@ -36,7 +36,7 @@ const stringify = (thing: unknown) => typeof thing === 'string'
 	: inspect(thing, { colors: false });
 /** Creates a colorizer function for the given color code. */
 export const createColor = (
-	code: number,
+	code: number | string,
 	reset = 0,
 ): Color => Object.assign(function colorizer(...args: unknown[]) {
 	const open = `${ESCAPE}${code}m`;
@@ -49,7 +49,7 @@ export const createColor = (
 }, { toString: ( ) => `${ESCAPE + code}m` });
 
 export const bold = createColor(CODE_BOLD, CODE_RESET_INTENSITY);
-export const dim = createColor(CODE_BOLD, CODE_RESET_INTENSITY);
+export const dim = createColor(CODE_DIM, CODE_RESET_INTENSITY);
 export const italic = createColor(CODE_ITALIC, CODE_RESET_ITALIC);
 export const underline = createColor(CODE_UNDERLINE, CODE_RESET_UNDERLINE);
 
