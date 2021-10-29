@@ -32,9 +32,9 @@ export function createLogger({
 		): LoggerMethod => function log(...args) {
 			if (targetLevel < level) return; // ignored
 			const target = stream(targetLevel);
-			const string = args.map(stringify);
+			const string = args.map(stringify).join(' ');
 			const pre = prefix(targetLevel);
-			const ctx = context.join(separator);
+			const ctx = context.join(separator) + (context.length ? separator : '');
 			target.write(`${timestamp( )}${pre}${ctx}${string}\n`);
 		};
 
