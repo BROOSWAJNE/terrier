@@ -1,4 +1,4 @@
 module.exports = {
 	root: true,
-	extends: [ '@brooswajne/eslint-config/typescript' ],
+	extends: [ '@brooswajne/eslint-config/overrides/typescript' ],
 };
