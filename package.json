@@ -6,7 +6,7 @@
   "type": "module",
   "main": "./dist/terrier.js",
   "exports": "./dist/terrier.js",
-  "files": [ "./dist" ],
+  "files": [ "dist" ],
 
   "scripts": {
 
